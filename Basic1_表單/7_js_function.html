@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介紹 function</title>
+</head>
+<body>
+    <script>
+        //宣告一個功能性的變數
+        //這個功能可以是一個變數  也可以是一個函式  也可以是兩者兼具
+
+        //宣告變數 和 呼叫變數:  宣告一個變數名A 並賦予內容 , 要使用時就用 變數A 呼叫此變數內容
+        //宣告function 和 呼叫function , 原理和宣告一個變數類似
+        //function和變數不同的地方  在　funtion宣告的內容 需要打框號
+        //這裡可以把function和()視為等同 PHP變數必須要有的$符號, 不把()當作執行條件看待會更好理解
+
+
+            //function 宣告 hello()為一個名為hello()的function
+        function hello (){
+            // { 該名為hello() 的 function 要執行的內容 }
+            console.log('12345log');//執行顯示測試 123log
+            alert('12345'); //執行顯示 alert (強迫觀看表格內容)
+        }
+
+
+        //這裡是function呼叫的內容, 在此執行了三次名為hello()的function
+        //這裡每次執行一次hello();  等同執行上面的宣告的整串 function hello (){console.log('12345log');alert('12345'); 所有內容一次
+        hello();
+        hello();
+        hello();
+        //所以在瀏覽器時, 會顯示三次alert表單(內容12345), F12時看見 12345log 也被執行了三次
+    </script>
+</body>
+</html>
