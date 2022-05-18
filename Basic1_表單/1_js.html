@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS表單基礎型態</title>
+</head>
+<body>
+    <script>
+        // 彈跳視窗(警告視窗) 強迫閱讀
+        // alert('hello');
+
+            //設置變數 : let 變數名=變數內容
+        let save=parseInt(prompt("存入金額",0));
+            //Console.log 類似PHP的echo 用於在瀏覽器F12查看狀態
+            console.log("存入金額 = " + save);
+        let buy=Number(prompt("消費金額",0))
+            console.log("消費金額 = " + buy);
+
+        if(save>buy){
+            result= save - buy;
+            save=result;
+        }else{
+            console.log("支出金額超出存款金額");
+
+        }
+            console.log("剩餘金額="+result);
+
+
+
+        
+    </script>
+</body>
+</html>
