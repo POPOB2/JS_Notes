@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領錢/轉帳</title>
+</head>
+
+<body>
+    <P>宣告變數執行 領錢/轉帳 功能</P>
+    <script>
+        // 表單-存款金額
+        let save = parseInt(prompt('請輸入要存款的金額', 0));
+        console.log('目前存款金額:' + save);
+        // 表單-選擇功能 : 1.提款 2.轉帳
+        let action = parseInt(prompt('選擇功能  1.提款  2.轉帳', 0));
+        console.log('選擇了功能=>' + action);
+        //switch 執行分支 : 1領款  or  2轉帳
+        switch (action) {
+            case 1: //領款選項
+                console.log('提款中...');
+                let getMoney = parseInt(prompt('請輸入提款金額', 0)); //變數getMoney的值來自 數字型態 的表單 內容
+                console.log('提款金額為:' + getMoney); //顯示 領取金額=上面表單提供的內容
+
+                //判斷金額大小 用於執行兩種狀況 
+                if (save >= getMoney) {
+                    console.log('提款成功');
+                    save = save - getMoney;
+                } else {
+                    console.log('提款失敗,提款金額大於存款金額');
+                }
+                console.log('餘額為' + save);
+                break;
+            case 2: //轉帳選項
+                console.log('轉帳中...');
+                let transferID = prompt('請輸入轉帳帳號', 0);
+                console.log('轉帳帳號為:' + transferID);
+                let transferMoney = parseInt(prompt('請輸入轉帳金額', 0));
+                console.log('轉帳金額為:' + transferMoney);
+
+                //判斷金額大小 用於執行兩種狀況
+                if (save >= transferMoney) {
+                    console.log('轉帳成功 已將' + transferMoney + '轉帳給:' + transferID);
+                    save = save - transferMoney;
+                } else {
+                    console.log('轉帳失敗 轉帳金額 大於 存款金額');
+                }
+                console.log('餘額為' + save);
+                break;
+                default:
+                break;
+        }
+
+
+        // 領錢時
+        // 輸入 領錢金額
+        // 判斷是否足夠領取
+        // 可以領 領多少 存款剩多少
+        // 不可以領 餘額不足
+
+
+        // 轉帳時
+        // 轉帳的帳號
+        // 輸入 領錢金額
+        // 判斷是否足夠領取
+        // 轉出多少 轉給誰 存款剩多少
+        // 不可以轉 餘額不足100
+    </script>
+</body>
+
+</html>
