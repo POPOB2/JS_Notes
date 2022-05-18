@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領錢/轉帳-function</title>
+</head>
+
+<body>
+    <p>領錢/轉帳 把 選項的部分從 宣告變數改為宣告function執行</p>
+    <script>
+        //---------------------------宣告function內容---------------------------
+
+
+
+        //提款的function宣告設定內容---------------------------------------------
+        function getMoneyFun() {
+            console.log('getMoneyFun');//非必要 用於在F12辨識
+            
+            let getMoney = parseInt(prompt('提款金額:',0));
+            console.log('提款金額:' + getMoney);
+
+            if(save >= getMoney){
+                console.log('提款成功');
+                myString = myString + '(取自宣告function內容區域的getMoney變數)提款金額:' + getMoney + "\n"; //宣告變數 myString=內容: 提款金額: + getMoney ++++++++++++++++++++++++++++++++++++++++++++++++
+                save = save - getMoney;
+            }else{
+                console.log("提款金額大於存款金額,提款失敗");
+            }
+            console.log('餘額為:' + save);
+        }
+
+        //轉帳的function宣告設定內容---------------------------------------------
+        function transferMoneyFun(){
+            console.log('transferMoneyFun');//非必要 用於在F12辨識
+
+            let transferID = (prompt('轉帳帳號:',0));
+            console.log('轉帳帳號:'+transferID);
+
+            let transferMoney = parseInt(prompt('轉帳金額:',0));
+            console.log('轉帳金額:'+transferMoney);
+
+            if(save >= transferMoney) {
+                console.log('轉帳成功');
+                myString = myString + '(取自宣告function內容區域的transferMoney變數)轉帳金額:' + transferMoney + "\n"; //宣告變數 myString=內容: 轉帳金額: + transferMoney ++++++++++++++++++++++++++++++++++++++++++++++++
+                save = save - transferMoney;
+            }else{
+                console.log('轉帳金額大於存款金額,轉帳失敗');
+            }
+            console.log('餘額為:' + save);   
+        }
+        //存款的function宣告設定內容---------------------------------------------
+        function saveMoneyFun(){
+            console.log('saveMoneyFun');//非必要 用於在F12辨識
+
+            let saveMoney = parseInt(prompt('請輸入要存款的金額',0))
+            console.log('存款金額:' + saveMoney);
+
+            if (saveMoney >= 0) {
+                console.log("存款成功");
+                myString = myString + '(取自宣告function內容區域的saveMoney變數)存款金額:' + saveMoney + "\n"; //宣告變數 myString=內容: 存款金額: + saveMoney ++++++++++++++++++++++++++++++++++++++++++++++++
+                save = save + saveMoney;
+            } else {
+                console.log('輸入金額錯誤');
+            }
+            console.log('餘額為:' + save);
+        }
+
+
+        //---------------------------呼叫function內容---------------------------
+        let myString= "";
+
+        let save = parseInt(prompt('請輸入要存款的金額', 0));
+        console.log('目前存款金額:' + save);
+
+        let action = parseInt(prompt('選擇功能  1.提款  2.轉帳  3.存款', 0));
+        console.log('選擇了功能=>' + action);
+
+        myString = '(取自呼叫function內容區域的action變數)選擇功能:' + action + "\n"; //宣告變數 myString=內容: '選擇功能:' + action ++++++++++++++++++++++++++++++++++++++++++++++++
+
+        switch (action) {
+            case 1: //領款選項
+                console.log('提款中...');
+                getMoneyFun();
+                break;
+            
+
+            case 2: //轉帳選項
+                console.log('轉帳中...');
+                transferMoneyFun();
+                break;
+
+
+            case 3: //存款選項
+                console.log('存款中...');
+                saveMoneyFun();
+                break;
+
+
+            default:
+                break;
+        }
+
+        //-------------------------------顯示結果-------------------------------
+
+        // 這裡的跳脫字元 \n  用於換行
+        // 這裡的 myString = "字串一" + "字串二";
+        myString = myString + '(取自結果頁的myString變數)餘額為:' + save + "\n";
+        alert(myString); //使用強迫閱讀頁 顯示上面的mysting內容(包含更上面的所有myString變數) 由上向下讀取下來 並一一顯示在alert頁面
+    </script>
+</body>
+
+</html>
