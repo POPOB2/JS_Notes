@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扣款</title>
+</head>
+
+<body>
+    <script>
+        
+        
+        //練習四
+        //1.輸入存錢數量  1000
+        //2.買東西的錢多少  500
+        //3.找零多少
+        //4.如果不夠 無法扣款
+        //5.最後顯示存款剩多少
+
+
+        // 1.輸入存錢數量  1000
+        // save
+        let save = parseInt(prompt('input save', 0));
+
+        console.log("本次存入=" + save);
+        // 2.買東西的錢多少  500
+        // buy
+        let buy = parseInt(prompt('input buy', 0));
+
+        // 3.找零多少
+        // money
+        if (save > buy) {
+            result = save - buy;
+            save = result; 
+            console.log("購買商品金額 = " + buy);
+        } else {
+            console.log("花太多了");
+        }
+            console.log("存款餘額", save);
+
+        // 4.如果不夠 無法扣款
+
+        // 5.最後顯示存款剩多少
+        // result
+    </script>
+</body>
+
+</html>
