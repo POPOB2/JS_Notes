@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判斷大小 多選</title>
+</head>
+
+<body>
+    <!-- 練習三
+    輸入兩個數字
+    判斷數字大小
+    誰大 或者 等於 您輸入錯誤
+
+    num1 , num2 
+    num1 > num2 ...
+    num1 > num2 ...
+    num1 = num2 ...
+    num1 or num2 error...
+
+ -->
+
+    <script>
+        //num1 , num2
+        let num1 = prompt("input num1", "0");
+        let num2 = prompt("input num2", "0");
+        // num1 > num2 ...
+        // num2 > num1 ...
+        // num1 = num2 ...
+        // num1 or num2 error...
+
+        if (num1 > num2) {
+            console.log("num1 > num2");
+        } else if (num2 > num1) {
+            console.log("num2 > num1");
+        } else if (num2 == num1) {
+            console.log("num2 = num1");
+        } else {
+            console.log("error");
+        }
+
+
+        console.log("num1=" + num1);
+        console.log("num2=" + num2);
+    </script>
+</body>
+
+</html>
