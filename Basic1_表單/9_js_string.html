@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_string</title>
+</head>
+<body>
+    <script>
+        //無跳脫字元 做換行
+        let myStringNoChange = "沒有跳脫字元做換行."; //設置一個變數A=內容
+        myStringNoChange = myStringNoChange + myStringNoChange + myStringNoChange; //"處理"變數A,使其變成變數A_1,而該A_1內容是A+A+A
+        alert(myStringNoChange); // 於表單顯示 變數A_1 的A+A+A內容
+        console.log('myStringNoChange',myStringNoChange);//F12顯示 變數A_1 的A+A+A內容
+
+        //有跳脫字元 做換行
+        let myStringChange = "有跳脫字元做換行." + "\n"; 
+        myStringChange = myStringChange + myStringChange + myStringChange;
+        alert(myStringChange);
+        console.log('myStringNoChange',myStringChange);
+
+        //string
+        let name = prompt("what's your anme?");
+        //在JS使用分號``框選的字串 可以在字串內使用${變數名} 來把變數套在字串內 不需要用+來拆寫成 "hello"+ name "早安"
+        console.log(`hello ${name} 早安`);
+        helloString = `hello ${name} 晚安`;//和console.log()於F12不同 , 宣告變數時不需()
+        console.log("helloString",helloString);//變數helloString在最後被宣告為晚安,這裡會顯示晚安
+        console.log(helloString);//變數helloString在最後被宣告為晚安,這裡會顯示晚安
+    </script>
+</body>
+</html>
