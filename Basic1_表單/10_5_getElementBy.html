@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementBy按鈕變換</title>
+    <style>
+        .queryClass {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------query----------------------------------- -->
+    <div class="queryClass">
+        query id test
+    </div>
+    <div class="queryClass">
+        query id test
+    </div>
+    <!-- ---------------------練習三 button touch queryClass red--------------------- -->
+    <br><br>
+    <button id="myBtn">不要按我!</button>
+    <div id="result">
+        就只是DIV
+    </div>
+    <script>
+        //--------------------練習三 button touch queryClass red--------------------            
+        const myBtn = document.getElementById('myBtn');
+        const result = document.getElementById('result');
+        const queryAllClass = document.querySelectorAll('.queryClass');
+
+        // 元件.觸發事件引信('click點擊事件',動作要做啥.)
+        myBtn.addEventListener('click', function () {
+            alert('BONK!!'); //浮動頁面功能
+
+            // 切換顏色
+            // for (const key in queryAllClass) {
+            //     queryAllClass[key].style.color = "red";
+            // }
+
+            // 切換DIV內容
+            result.innerText = "下面的引信"
+        });
+    </script>
+</body>
+
+</html>
