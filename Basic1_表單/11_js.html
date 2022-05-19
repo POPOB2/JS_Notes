@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementBy...</title>
+
+</head>
+
+<body> 
+
+    <div class="queryClass">
+        加法計算
+    </div>
+
+    <!-- -----------------練習四 input num1 抓出來 input num2 抓出來----------------- -->
+    <!-- ---------------------練習五 num1 + num2 result 顯示結果--------------------- -->
+    <input type="text" name="num1" id="num1" placeholder="num1 ?" required>
+    <span> + </span>
+    <input type="text" name="num2" id="num2" placeholder="num2 ?" required>
+    <button id="myBtn">不要按我!</button>
+    <br>
+    <div id="result">
+        計算前
+    </div>
+    <script>
+        const myBtn = document.getElementById('myBtn');
+        const result = document.getElementById('result');
+
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+
+        const queryAllClass = document.querySelectorAll('.queryClass');
+
+        myBtn.addEventListener('click', function () {
+            let num1 = parseInt(num1Input.value);
+            let num2 = parseInt(num2Input.value);
+            console.log(num1 + num2);
+            sum = num1 + num2;
+            result.innerText = `結果為 ${sum}`;
+        });
+        // ---------------------------getElementBy....等功能---------------------------
+
+        // getElementById 獲得單個ID
+        // 從這裡引用上面的div
+        // const testDiv = document.getElementById('test'); 
+        // innerText 使用文字呈現
+        // testDiv.innerText = "add test txt"; 
+        // innerHTML使用html呈現
+        // testDiv.innerHTML = "<h1>h1裡的內容</h1>"; 
+
+
+        // getElementByClassName 獲得全部的class
+        // const myClass = document.getElementsByClassName('myClass');
+        // console.log(myClass[0].innerText);
+        // myClass[1].style.color = "blue";
+
+
+        // querySelector 獲得query
+        // const query = document.querySelector("#query");
+        // query.style.color = "green";
+
+
+
+        // -----------------------------全部class更換顏色-----------------------------
+
+        // 方案1.for
+        // for (let i=0; i < queryAllClass.length; i++){
+        // queryAllClass[i].style.color = "lightblue";
+        // }
+
+        // 方案2.for in (類似PHP的foreach)
+        // for (const key in queryAllClass){
+        // queryAllClass[key].style.color = "lightblue";
+        //}
+
+        //-------------------另一種宣告方式 連續時不用每一行都寫上let-------------------
+
+        // let student1 = "amy";
+        // student2 = "bob";
+        // student3 = "cat";
+
+        //-----------------------------普通的宣告變數/常數-----------------------------
+
+        // 1.let 宣告變數
+        // let x = 10;
+
+        // 2.const 宣告常數,何謂常數:不可改變的值
+        // const y = 20;
+        // x = 300;
+        // y = 300; comst不可改變
+
+        // 3.var 宣告變數 
+        // var z = 100;
+
+        //--------------------------------------------------------------------------
+    </script>
+</body>
+
+</html>
