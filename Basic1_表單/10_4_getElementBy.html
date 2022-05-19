@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementBy...</title>
+    <style>
+        h1 {
+            color: red;
+        }
+        .myClass {
+            color: blue;
+        }
+        .queryClass{
+            color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="test">
+      
+    </div>
+    <!-- ---------------------------------Class----------------------------------- -->
+    <div class="myClass">
+        Hello my Class1
+    </div>
+    <div class="myClass">
+        Hello my Class2
+    </div>
+    <!-- ---------------------------------query----------------------------------- -->
+    <div id="query">
+        query id test
+    </div>
+    <div class="queryClass">
+        query id test
+    </div>
+    <div class="queryClass">
+        query id test
+    </div>
+    <script>
+        // ---------------------------getElementBy....等功能---------------------------
+
+        // getElementById 獲得單個ID
+        // 從這裡引用上面的div
+                // const testDiv = document.getElementById('test'); 
+        // innerText 使用文字呈現
+                // testDiv.innerText = "add test txt"; 
+        // innerHTML使用html呈現
+                // testDiv.innerHTML = "<h1>h1裡的內容</h1>"; 
+
+
+        // getElementByClassName 獲得全部的class
+                // const myClass = document.getElementsByClassName('myClass');
+                // console.log(myClass[0].innerText);
+                // myClass[1].style.color = "blue";
+
+
+        // querySelector 獲得query
+                // const query = document.querySelector("#query");
+                // query.style.color = "green";
+
+
+        // querySelectorAll
+                const queryAllClass = document.querySelectorAll('.queryClass');
+
+        // -----------------------------全部class更換顏色-----------------------------
+
+        // 方案1.for
+        // for (let i=0; i < queryAllClass.length; i++){
+        // queryAllClass[i].style.color = "lightblue";
+        // }
+
+        // 方案2.for in (類似PHP的foreach)
+        // for (const key in queryAllClass){
+        // queryAllClass[key].style.color = "lightblue";
+        //}
+
+        //-------------------另一種宣告方式 連續時不用每一行都寫上let-------------------
+
+        // let student1 = "amy";
+        // student2 = "bob";
+        // student3 = "cat";
+
+        //-----------------------------普通的宣告變數/常數-----------------------------
+
+        // 1.let 宣告變數
+        // let x = 10;
+
+        // 2.const 宣告常數,何謂常數:不可改變的值
+        // const y = 20;
+        // x = 300;
+        // y = 300; comst不可改變
+
+        // 3.var 宣告變數 
+        // var z = 100;
+
+        //--------------------------------------------------------------------------
+    </script>
+</body>
+
+</html>
