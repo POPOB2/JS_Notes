@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+    <script>
+        //--------------------------------------基本形式--------------------------------------01
+
+        // //宣告
+        //         function hello1() {
+        //             console.log('你好1');
+        //         }
+
+        //         function hello2() {
+        //             console.log('你好2');
+        //         }
+
+        //         function hello3() {
+        //             console.log('你好3');
+        //         }
+            
+        // //執行
+        //         hello1()
+        //         hello2()
+        //         hello3()
+
+        //-------------------------用一個寫好的function管理共通的邏輯-------------------------02
+        //-------------------------第一種宣告方式 ,沒有參數的function-------------------------1
+
+        //         function addMoney(){
+        //         console.log(100+200);
+        //         }
+
+        // // 結帳頁面
+        //         addMoney()
+
+        // // 購物車頁面
+        //         addMoney()
+
+        //-------------------------用一個寫好的function管理共通的邏輯-------------------------02
+        //--------------------------第二種宣告方式 ,有參數的function--------------------------2
+        //----------------------------無回傳值的function(retuen)----------------------------03
+
+        // // 接受傳入兩個參數
+        //         function addMoney(price1,price2,discount) {
+        //         console.log(price1 + price2 - discount);
+        //         }
+
+
+
+        // // 用N個function 共用同一個邏輯 內容由下面填入 不影響上面的fuction公式
+        // // 當填2000,100=套入addMoney的price1,price2
+        // // 當填3000,200=套入addMoney的price1,price2
+
+        // // 結帳頁面
+        //         addMoney(2000,100,50)
+
+        // // 購物車頁面
+        //         addMoney(3000,200,100)
+
+        //----------------------------有回傳值的function(retuen)----------------------------03
+
+                // function addMoney(price1,price2,discount){
+                // // console.log('商品1',price1);
+                // // console.log('商品2',price2);
+                // // console.log('折價卷',discount);
+                // let result = price1 + price2 - discount//計算完的結果=變數result
+                // // console.log('結果',result);
+                // return result//使用return將變數result丟出去
+                // }
+
+                // let total = addMoney(5000,5000,1000)//宣告變數total 結果為計算完的addMoney
+                // console.log('總共',total);//F12看到變數total有addMony的結果
+
+        //----------------------------有回傳值的function(retuen)----------------------------03
+        //------------------------------新增if 應用 類似else if-----------------------------
+
+        // // 產生結果時 使用return停止計算並發出結果 讓function外的 接收者收到結果
+        //         function addMoney(price1,price2,discount){
+        //         let result = price1 + price2 - discount
+        //         let message = '普通會員'
+        // // 這裡計算完result變'尊榮會員'
+        //         if (result >= 50000){
+        //             message = '尊榮會員'
+        //             return message// 為必免向下計算產生不必要結果,當條件符合時使用return將結果輸出,直接離開if計算作為停止
+        //         }
+        // // 若繼續向下計算 因條件也符合所以 result 從'尊榮會員'變'白金會員'
+
+        //         if (result >= 20000){
+        //             message = '白金會員'
+        //             return message
+        //         }
+        //         return message
+        //         }
+
+
+        // // 消費金額
+        //         let msg = addMoney(50000,5000,1000)//我是return message的接收者
+        //         console.log('會員等級',msg);
+
+        //------------------------------構造函數 function------------------------------04
+
+        // 一般方式容易出錯與難管理 如下
+        // const card={name:"小明1"}
+        // const card={name:"小明2"}
+        // const card={name:"小明3"}
+        // const.......*N
+        // 可以改用構造函式來量產小明
+
+
+        //將function createCard從外部傳入initName參數
+                function createCard(initName){
+                    this.cardName = initName //this代表函數本身(當下誰執行this這個函數時,this就是誰)
+                }
+                //new = 建立 或 構造
+                const a1 = new createCard('小明1')//此時常數a1是一個透過createCard建立出來的物件,內部包含cardName
+                const a2 = new createCard('小明2')
+                const a3 = new createCard('小明3')
+                const a4 = new createCard('小明4')
+                const a5 = new createCard('小明5')
+                console.log(a1);
+                console.log(a2);
+                console.log(a3);
+                console.log(a4);
+                console.log(a5);
+        //------------------------------其它寫法 function------------------------------05
+        //這種方法宣告hello會被調用
+                // function hello() {}//什麼都沒有的函數
+
+        //這種方法宣告hello會被保存
+                // let hello = function(){}//用變數宣告function函式
+                // let hello = () => {}//上面的變數宣告function的簡寫 ,兩種是相等的function寫法 ,會不同只是發展史的衍生
+    </script>
+</body>
+
+</html>
