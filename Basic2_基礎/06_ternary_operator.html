@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三元運算子</title>
+</head>
+<body>
+    <script>
+    // where ? true : false;
+            // let like = "在家";
+            // let str = "";
+
+    // 原本的if else-------------------------------------------------------------
+            // if(like == "在家"){
+                // str = "恭喜你可以睡到7:59";
+            // }else{
+                // str = "希望大家都平安";
+            // }
+            // console.log("1:" + str);
+
+    // 三元運算子 (用於短寫內容 長的還是建議用回if else)----------------------------------
+        //  (like == "在家") ?  "恭喜你可以睡到7" : "希望大家都平安" ;
+        //   like == "在家"  ?  "恭喜你可以睡到7" : "希望大家都平安" ;
+        //   變數 == "內容"  if  "if執行的內容" else "else執行的內容";
+
+            // str = (like == "在家") ?  "恭喜你可以睡到7:59" : "希望大家都平安" ;
+            // console.log("str => "+ str );
+
+    // 三元運算子-練習三-------------------------------------------------------------
+    // 如果 天氣 下雨
+    // true => "記得帶傘"
+    // false => "沒事"
+
+            let weather = "雨天";
+            // let weather ="大晴天";
+            weather = (weather == "雨天") ? "記得帶傘" : "沒事";
+            console.log('weather:',weather);
+    </script>
+</body>
+</html>
