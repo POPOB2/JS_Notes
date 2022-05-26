@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+<body>
+    <!-- math -->
+    <script>
+        // 原始 
+                // let num1Init = 4.6;
+                // console.log(num1Init);
+        
+        // 四捨五入 round
+                // let num1Round = Math.round(num1Init);
+                // console.log('num1Round:',num1Round);
+
+        // 無條件進位 round
+                // let num1Ceil = Math.round(num1Ceil);
+
+        // 隨機變數 random() 0-1 小數
+                // let numRandom = Math.random();//random 需要在句尾設置區間才能正常執行  此時的亂數包含小數點
+                // console.log('numRandom:',numRandom);
+
+        // 簡易樂透  取數1~50  有機率出現重複的數字
+        // Math.floor(Math.random()*50)   *50=上限設為50   這裡取0~49  (樂透號碼是49個但系統從0作為1開始算 所以要設50才會有到49號)
+                // let lottery = Math.floor(Math.random()*50)+1; // floor=正整數  句尾+1=從1開始
+        // floor() 取整數       Math.floor(3.1) 會是3
+        // Math.abs() 絕對值
+
+
+                // for (let i = 1; i <= 6; i++) {
+                //     let lotteryNum = Math.floor(Math.random()*50) +1;
+                //     console.log(lotteryNum + "\n");
+                // }
+
+        // 另一種寫法   用function給區間 設定起始值
+        function getRandom(min,max) {
+            myNum = Math.floor(MathMath.random()*(max-min+1))+min;//這裡的max-min+1=第29行設置的區間 最大減最小+1 即1~50
+            return myNum;
+        }
+
+
+    </script>
+</body>
+</html>
