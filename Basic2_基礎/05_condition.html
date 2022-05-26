@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用中文理解程式</title>
+</head>
+<body>
+    <!-- 條件控制 -->
+    <script>
+        // condition 條件控制-----------------------------------------------
+        // 如果...就可以...if else
+        // 否則...
+
+        // 我買了這組大樂透中講了
+        // 有中的話 就可以環遊世界 幫助更多人
+        // 沒中的話 繼續工作..
+
+        // 中獎了 = True
+                // let myLottery = false;
+
+                // if(myLottery){
+                    // console.log("中獎了,明天就環遊世界 幫助更多人");
+                // }else{
+                    // console.log("繼續社畜生活");
+                // }
+        // 練習一------------------------------------------------------------
+        // (條件一) 我買了這組大樂透中講了
+        // (條件二) 且中將金額超過一千萬
+        // 有中的話 就可以環遊世界 幫助更多人
+        // 沒中的話 繼續工作..
+        
+        // 方法一
+        // if(中獎了){if(超過1000萬)}
+                // let myLottery = true;
+                // let money = 2000;
+                // if(myLottery){    
+                //     console.log("myLottery",myLottery);// 使用log檢查條件實際內容是否是正確結果
+                //     console.log("money",money);// 使用log檢查條件實際內容是否是正確結果
+                // if(money>1000){
+                //     console.log("中獎了,明天就環遊世界 幫助更多人");
+                // }
+                // }
+
+
+        // 方法二
+        // if(中獎了且大於一千萬){}
+                // let myLottery = true;
+                // let money = 2000;
+                // if(myLottery && money >1000){
+                //     console.log('myLottery',myLottery);
+                //     console.log('money',money);
+                //     console.log('方法二ok');
+                // }
+        // 練習二------------------------------------------------------------
+        // (條件一)中獎了
+        // (條件二)超過1000萬
+        // (條件三)不能是Luna幣
+        // luna = null
+        // 下市了 = undefined
+                // let myLottery = true;
+                // let money = 2000;
+                // let type = 'USD';
+                // if(myLottery && money >1000 && type!='Luna'){
+                // console.log('myLottery',myLottery);
+                // console.log('money',money);
+                // console.log('type',type);
+                // console.log('美金暴漲 賺爛了');
+                // }else{// Luna幣 GG
+                //     console.log('繼續工作');
+                // }
+        // 練習三------------------------------------------------------------
+        // if else 非黑即白 只有是或否
+        // 這裡新增第三選擇
+        // 狗狗幣 買!
+        // (條件一) 暴漲(中獎)了
+        // (條件二) money > 10000
+        // (條件三) 狗狗幣
+        // 結果 有一天狗狗幣10000美元 賺爛了
+
+                // let myLottery = true;
+                // let money = 20000;
+                // let type = '狗狗幣';
+                // let type = 'Luna';
+                
+
+
+                // if(myLottery && money >1000 && type!='狗狗幣'){
+                //     console.log('myLottery',myLottery);
+                //     console.log('money',money);
+                //     console.log('type',type);
+                //     console.log('除了狗狗幣之外的幣賺了1000美');
+                // }else if(myLottery && money > 10000 && type == '狗狗幣'){
+                //     console.log('myLottery',myLottery);
+                //     console.log('money',money);
+                //     console.log('type',type);
+                //     console.log('狗狗幣暴漲到 10000美元 賺爛了');
+                // }else{
+                //     console.log('沒漲 乖乖繼續工作');
+                // }
+
+        // 練習四------------------------------------------------------------
+        // 流程圖 if else
+        // 泰山咖啡店
+        // 身份證字號有345
+        // 會員身份
+        // 1. 345 => 1折
+        // 2. 678 => 5折
+        // 3. 90 => 7折
+        // 沒有會員
+        // 4.95折
+
+        
+        // (條件一) get 身分證字號 -> 判斷 是否有 345 / 678 / 90
+        // (條件二) 有沒有會員
+
+                let id = "F123456789";// let 身份證字號的變數 string
+                let isMember = true;// let 會員身份 boolean
+        // 使用search時會抓到position位置 對應到一樣的字會顯示該位置的數字從0開始算 A在第一個位置顯示0
+        // 若字不存在則顯示位置-1  字存在則0123...排列方式去取位置
+                // let idStr = id.search("C");
+                // console.log('idStr:',idStr);//查看search的效果
+                let idStr = "";
+                let idResult="";
+                let conditionNum="";
+        // 3 4 5   *********************************************
+                if(idResult.length==0){
+                    conditionNum="3";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "A";
+                    }
+                }
+
+                if(idResult.length==0){
+                    conditionNum="4";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "A";
+                    }
+                }
+
+                if(idResult.length==0){
+                    conditionNum="5";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "A";
+                    }
+                }
+            
+        // 6 7 8   *********************************************
+                if(idResult.length==0){
+                    conditionNum="6";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "B";
+                    }
+                }
+
+                if(idResult.length==0){
+                    conditionNum="7";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "B";
+                    }
+                }
+
+                if(idResult.length==0){
+                    conditionNum="8";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "B";
+                    }
+                }
+        // 9 0   *********************************************  
+                if(idResult.length==0){
+                    conditionNum="9";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "C";
+                    }
+                }
+
+                if(idResult.length==0){
+                    conditionNum="0";
+                    idStr = id.search(conditionNum);
+                    if(idStr > 0){
+                        idResult = "C";
+                    }
+                }
+
+        // 身份證字號 與 會員身分 結果   *********************************************
+                console.log('id:',id);
+                console.log('isMeber:',isMember);
+                console.log('idResult:',idResult);
+                console.log('idStr:',idStr);
+                console.log('conditionNum',conditionNum);
+
+        // 折扣的部分-----------------------------------------------
+
+        // idResult & isMember 條件 達到時 執行顯示折扣內容
+        // A && member => 1折
+        // B && member => 5折
+        // C && member => 7折
+        // 其他 => 95折
+        if(idResult == "A" && isMember){
+            console.log('恭喜 得到 1折');
+            
+        }else if(idResult == "B" && isMember){
+            console.log('恭喜 得到 5折');
+
+        }else if(idResult == "C" && isMember){
+            console.log('恭喜 得到 7折');
+
+        }else{
+            console.log('請註冊會員,才可享有折扣');
+        }
+    </script>
+</body>
+</html>
