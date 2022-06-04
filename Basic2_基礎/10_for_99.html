@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99乘法表</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        table,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="red">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+    <script>
+
+        // -----------------------------------------------------練習一-----------------------------------------------------
+        // 練習99乘法表 console顯示
+        // 練習一 console.log 練習 99乘法表
+        // 1*1=1 ..... 1*9=9
+        // 9*9=9 ..... 9*9=81
+
+                    // for(i=1; i<=9; i++){
+                    //     console.log(i); // 先完成乘數 1~9
+                    //     for(j=1; j<=9; j++){
+                    //         console.log(j); // 再添加被乘數 1~9
+                    //         document.write(`${i}*${j}=${i*j}&nbsp;&nbsp;&nbsp;&nbsp;`);// 使用上引號與$大框號串起 乘數 與 被乘數 與 相乘結果
+                    //     }
+                    //     document.write('<br>');
+                    // }
+        // -----------------------------------------------------練習二-----------------------------------------------------
+        // 將上述的99乘法表的個位數補上0  使其對齊
+        // 01*01=01 ..... 01*09=09
+        // 09*09=09 ..... 09*09=81
+        
+
+        // 數字變字串
+        // 1.number -> string
+        // 2.string 補0
+                    // let test = 5; // 設一個變數A  內容數字5
+                    // let testStr = test.toString(); // 設一個變數B 內容變數A的內容轉為字串內容
+                    // console.log('testStr=>' + testStr); // 顯示變數B 內容為字串5
+                    // let testStrChange = testStr.padStart(5,"0"); // 設置變數C  使用變數.padStart() 可以設定補零 第一個值為補多少個 第二個值為補什麼內容
+                    // console.log('補0testStr=>' + testStrChange); // 顯示變數C 內容為補了四個零的字串00005
+
+        // 先讓練習一的公式 用數字的型態進行相乘 算出結果後 再轉為字串 使用加零 顯示出結果
+        // 1.number -> string
+                    // let iStr=i.toString();
+                    // let jStr=j.toString();
+                    // let ijStr=(i*j).toString();
+        // 2.string 補0
+                    // let istrChange = iStr.padStart(1,"0");
+                    // let jstrChange = jStr.padStart(1,"0");
+                    // let ijstrChange = ijStr.padStart(1,"0");
+        // 3.顯示補0後的結果
+                    // document.write(`${istrChange} * ${jstrChange} = ${ijstrChange}&nbsp;&nbsp;&nbsp;&nbsp;`);
+        // -----------------------------------------------------練習一+二成果-----------------------------------------------------
+                    // for(i=1; i<=9; i++){
+                    //     for(j=1; j<=9; j++){
+                    //         let iStr=i.toString();
+                    //         let jStr=j.toString();
+                    //         let ijStr=(i*j).toString();
+                    //         let istrChange = iStr.padStart(2,"0");
+                    //         let jstrChange = jStr.padStart(2,"0");
+                    //         let ijstrChange = ijStr.padStart(2,"0");
+                    //         document.write(`${istrChange} * ${jstrChange} = ${ijstrChange}&nbsp;&nbsp;&nbsp;&nbsp;`);
+                    //     }
+                    //     document.write('<br>');
+                    // }
+        // -----------------------------------------------------上色-----------------------------------------------------
+        
+
+    
+                    for(i=1; i<=9; i++){
+                        if(i==2){
+                            document.write('<p class="red">');
+                        }else if(i%2==1){
+                            document.write('<p class="blue">');
+                        }
+                        else{
+                            document.write('<p>');
+                        }
+
+                        for(j=1; j<=9; j++){
+                            let iStr=i.toString();
+                            let jStr=j.toString();
+                            let ijStr=(i*j).toString();
+                            let istrChange = iStr.padStart(2,"0");
+                            let jstrChange = jStr.padStart(2,"0");
+                            let ijstrChange = ijStr.padStart(2,"0");
+                            document.write(`${istrChange} * ${jstrChange} = ${ijstrChange}&nbsp;&nbsp;&nbsp;&nbsp;`);
+                        }
+                        document.write('</p>');
+                        // document.write('<br>');
+                    }
+
+    </script>
+</body>
+</html>
